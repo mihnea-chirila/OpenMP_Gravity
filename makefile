@@ -3,14 +3,14 @@
 #     make          ... to build the program
 #     make test     ... to run the default test case
 #
-include ../make.def
+include make.def
 
 EXES = activate_function$(EXE)
 
 all: $(EXES)
 
 activate_function$(EXE): activate_function.$(OBJ)
-	nvc++ $(OPTFLAGS) -o activate_function$(EXE) activate_function.$(OBJ) $(LIBS)
+	nvc++ $(OPTFLAGS) -o activate_function$(EXE) activate_function.$(OBJ)
 
 test: $(EXES)
 	for i in $(EXES); do \
